@@ -25,5 +25,10 @@ export default withAuth(
     },
     lists,
     session,
+    // Thêm cấu hình server
+    server: {
+      port: parseInt(process.env.PORT || '80'),
+      cors: { origin: ['*'], credentials: true },
+    },
   })
 )
